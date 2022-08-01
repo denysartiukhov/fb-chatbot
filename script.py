@@ -23,8 +23,7 @@ while True:
     for message in messages:
         if message.author != friend.uid:
             break
-        # elif "🖕" in message.text and message.author == friend.uid:
-        elif message.author == friend.uid:
+        elif "🖕" in message.text and message.author == friend.uid:
             try:
                 sent = client.send(fbchat.models.Message("🖕"), friend.uid)
             except:
@@ -36,11 +35,6 @@ while True:
             if sent:
                 print("Message sent successfully!")
             break
-    # if message[0].text == "🖕" and message[0].author == "100053264810540":
-    #     sent = client.send(fbchat.models.Message("🖕"), 100053264810540)
-    #     if sent:
-    #         print("Message sent successfully!")
+
     print("loop")
     time.sleep(5)
-
-# print(friend.uid)
